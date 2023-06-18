@@ -18,9 +18,11 @@ app.use(
 readdirSync("./routes").map((r) => app.use("/", require("./routes/" + r)));
 
 //database
+mongoose.set('strictQuery', false)
 mongoose
   .connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
+    
   })
   .then(() => console.log("database connected successfully"))
   .catch((err) => console.log("error connecting to mongodb", err));
