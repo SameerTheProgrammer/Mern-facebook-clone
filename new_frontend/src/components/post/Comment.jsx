@@ -1,8 +1,6 @@
-import Moment from "react-moment";
+// import Moment from "react-moment";
 
 export default function Comment({ comment }) {
-  console.log(comment); // Check the structure and values of comment
-
   return (
     <div className="comment">
       <img src={comment.commentBy.picture} alt="" className="comment_img" />
@@ -20,9 +18,9 @@ export default function Comment({ comment }) {
           <span>Like</span>
           <span>Reply</span>
           <span>
-            <Moment fromNow interval={30}>
+            {/* <Moment fromNow interval={30}>
               {comment.commentAt}
-            </Moment>
+            </Moment> */}
           </span>
         </div>
       </div>
