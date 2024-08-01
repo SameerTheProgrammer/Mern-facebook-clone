@@ -58,6 +58,14 @@ export default function LoginForm({ setVisible }) {
       </div>
       <div className="login_2">
         <div className="login_2_wrap">
+          <div>
+            <div>
+              Wants to login quickly use below data
+            </div>
+            <div>
+              Email:- admin100@gmail.com Password:- 123456789
+            </div>
+          </div>
           <Formik
             enableReinitialize
             initialValues={{
