@@ -34,7 +34,7 @@ function App() {
         throw new Error("User token not found");
       }
       const { data } = await axios.get(
-        `${import.meta.env.REACT_APP_BACKEND_URL}/getAllposts`,
+        `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/getAllposts`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

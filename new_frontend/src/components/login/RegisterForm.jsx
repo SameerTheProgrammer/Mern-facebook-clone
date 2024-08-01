@@ -111,6 +111,14 @@ export default function RegisterForm({ setVisible }) {
           <span>Sign Up</span>
           <span>it's quick and easy</span>
         </div>
+        <div>
+            <div>
+            Wants to login quickly use below data
+            </div>
+            <div>
+            Email:- admin100@gmail.com Password:- 123456789
+            </div>
+          </div>
         <Formik
           enableReinitialize
           initialValues={{
@@ -127,15 +135,15 @@ export default function RegisterForm({ setVisible }) {
           onSubmit={() => {
             let current_date = new Date();
             let picked_date = new Date(bYear, bMonth - 1, bDay);
-            let atleast14 = new Date(1970 + 14, 0, 1);
-            let noMoreThan70 = new Date(1970 + 70, 0, 1);
-            if (current_date - picked_date < atleast14) {
+            let atleast0 = new Date(1970 + 0, 0, 1);
+            let noMoreThan100 = new Date(1970 + 100, 0, 1);
+            if (current_date - picked_date < atleast0) {
               setDateError(
-                "it looks like you(ve enetered the wrong info.Please make sure that you use your real date of birth."
+                "it looks like you've enetered the wrong info. Please make sure that you use your real date of birth."
               );
-            } else if (current_date - picked_date > noMoreThan70) {
+            } else if (current_date - picked_date > noMoreThan100) {
               setDateError(
-                "it looks like you(ve enetered the wrong info.Please make sure that you use your real date of birth."
+                "it looks like you(ve enetered the wrong info. Please make sure that you use your real date of birth."
               );
             } else if (gender === "") {
               setDateError("");
